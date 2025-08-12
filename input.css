@@ -1,1 +1,49 @@
 @import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+@theme {
+    --color-neutral-0: #fbfdfe;
+    --color-neutral-100: #eeeeee;
+    --color-neutral-200: #d6e2f5;
+    --color-neutral-300: #c6c6c6;
+    --color-neutral-600: #535868;
+    --color-neutral-700: #2f364b;
+    --color-neutral-800: #202535;
+    --color-neutral-900: #091540;
+    --color-red-400: #f25c54;
+    --color-red-500: #de4840;
+    --color-red-700: #c7231a;
+
+}
+
+
+
+@layer components {
+    .filter-btn-inactive {
+        @apply text-[20px] font-medium rounded-full border border-neutral-200 bg-neutral-0 text-neutral-800 pt-2 pb-2.5 px-5;
+    }
+
+    .filter-btn-active {
+        @apply text-[20px] font-medium rounded-full bg-red-700 text-neutral-0 pt-2 pb-2.5 px-5;
+    }
+    .extinfo{
+        @apply flex space-x-4
+    }
+
+    .card{
+        @apply bg-neutral-0 border border-neutral-200 rounded-[20px] w-[343px] h-[200px]
+    }
+    .ico-container{
+        @apply rounded-[10px]
+    }
+    .btn-ext{
+        @apply text-[16px] mx-4 px-4 py-2 font-bold border border-neutral-300 rounded-full text-neutral-900;
+    }
+}

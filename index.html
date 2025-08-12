@@ -1,22 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Browser Extension Manager</title>
-    <link href="./src/output.css" rel="stylesheet">
-</head>
-<body>
-    <header class="bg-neutral-800 h-[66px] w-[343px] mx-auto flex items-center justify-between rounded-[10px] mt-[24px]">
-        <img src="assets/images/logo.svg" alt="header" class="ml-3">
-        
-        <div class="bg-neutral-700 mr-3 w-[50px] h-[50px] flex items-center justify-center rounded-xl">
-            <img src="assets/images/icon-sun.svg" alt="bmode" class="w-[22px] h-[22px]">
-        </div>
-        
-    </header>
-   
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Browser Extension Manager</title>
+        <link href="./src/output.css" rel="stylesheet">
 
-  
-</body>
+    </head>
+    <body class="bg-[#EBF2FC]">
+        <header
+            class="bg-[#FBFDFE] border border-[#D6E2F5] shadow h-[66px] w-[343px] mx-auto flex items-center justify-between rounded-[10px] mt-[24px]">
+            <img src="assets/images/logo.svg" alt="header" class="ml-3">
+
+            <div
+                class="bg-neutral-100 mr-3 w-[50px] h-[50px] flex items-center justify-center rounded-xl">
+                <img src="assets/images/icon-moon.svg" alt="bmode"
+                    class="w-[22px] h-[22px]">
+            </div>
+        </header>
+        <main class="h-[66px] w-[343px] mx-auto mt-10">
+            <!-- Filter section START -->
+            <h1
+                class="text-center text-[34px] text-neutral-800 font-bold mb-6">Extensions
+                List</h1>
+            <div class="filter-container flex justify-center space-x-3">
+                <button class="filter-btn-active ">All</button>
+                <button class="filter-btn-inactive">Active</button>
+                <button class="filter-btn-inactive">Inactive</button>
+            </div>
+            <!-- Filter section END -->
+
+            <!-- Cards section START-->
+            <section class="mt-10">
+                <div class="card">
+                    <div class="extinfo mx-4 mt-4">
+                        <div class="ico-container">
+                            <img src="assets/images/logo-devlens.svg" alt="ico">
+                        </div>
+                        <div class="details">
+                            <h2 class="text-xl font-bold text-neutral-900">DevLens</h2>
+                            <p class="text-neutral-600">Quickly inspect page layouts <br>and visualize element <br>boundaries.</p>
+                        </div>
+                    </div>
+                    <div class="btnsCotainer">
+                        <button class="btn-ext mt-5">Remove</button>
+                    </div>
+                </div>
+            </section>
+            <!-- Cards section END -->
+        </main>
+
+    </body>
 </html>
