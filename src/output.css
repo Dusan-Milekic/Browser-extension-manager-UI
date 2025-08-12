@@ -260,6 +260,12 @@
   .bg-neutral-100 {
     background-color: var(--color-neutral-100);
   }
+  .bg-red-700 {
+    background-color: var(--color-red-700);
+  }
+  .py-0\.5 {
+    padding-block: calc(var(--spacing) * 0.5);
+  }
   .text-center {
     text-align: center;
   }
@@ -352,6 +358,28 @@ body {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
     color: var(--color-neutral-900);
+  }
+  .toggle-btn {
+    margin-inline: calc(var(--spacing) * 4);
+    display: flex;
+    height: calc(var(--spacing) * 5);
+    width: calc(var(--spacing) * 9);
+    cursor: pointer;
+    border-radius: calc(infinity * 1px);
+    background-color: var(--color-neutral-300);
+  }
+  .toggle-circle {
+    margin-inline: calc(var(--spacing) * 0.5);
+    height: calc(var(--spacing) * 4);
+    width: calc(var(--spacing) * 4);
+    border-radius: calc(infinity * 1px);
+    background-color: var(--color-neutral-0);
+    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .ison {
+    margin-left: auto;
+    align-self: flex-end;
   }
 }
 @property --tw-space-x-reverse {
