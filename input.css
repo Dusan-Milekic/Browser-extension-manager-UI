@@ -4,7 +4,7 @@
 
 
 
-body{
+body {
     font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -12,6 +12,7 @@ body{
 
 @custom-variant dark (&:where(.dark, .dark *));
 @custom-variant toggle_on (&:where(.toggle_on, .toggle_on *));
+
 @theme {
     --color-neutral-0: #fbfdfe;
     --color-neutral-100: #eeeeee;
@@ -25,9 +26,15 @@ body{
     --color-red-500: #de4840;
     --color-red-700: #c7231a;
 
+    --breakpoint-desktop: 1170px;
 }
 
 
+
+.details p {
+    word-break: break-word;
+    color: #535868;
+}
 
 @layer components {
     .filter-btn-inactive {
@@ -37,27 +44,55 @@ body{
     .filter-btn-active {
         @apply text-[20px] font-medium rounded-full bg-red-700 text-neutral-0 pt-2 pb-2.5 px-5;
     }
-    .extinfo{
-        @apply flex space-x-4
+
+    .extinfo {
+        @apply flex space-x-4 mx-4 mt-4;
     }
 
-    .card{
-        @apply bg-neutral-0 border border-neutral-200 rounded-[20px] w-[343px] h-[200px]
+    .card {
+        @apply bg-neutral-0 border border-neutral-200 rounded-[20px] w-[343px] h-[200px];
+        @apply md:w-[346px];
+        @apply xl:w-[382px];
     }
-    .ico-container{
-        @apply rounded-[10px]
+
+     .ico-container {
+        @apply rounded-[10px] w-[120px];
     }
-    .btn-ext{
+
+    #detail-h2 {
+        @apply  text-xl font-bold text-neutral-900;
+    }
+   
+
+
+    .btnsContainer {
+        @apply flex justify-between items-center;
+    }
+
+    .btnText {
+        @apply mt-5;
+    }
+
+    .btnToggle {
+        @apply mt-5 py-0.5;
+    }
+
+    .btn-ext {
         @apply text-[16px] mx-4 px-4 py-2 font-bold border border-neutral-300 rounded-full text-neutral-900;
     }
 
-    .toggle-btn{
+    .toggle-btn {
         @apply bg-neutral-300 w-9 h-5 mx-4 rounded-full cursor-pointer flex;
     }
-    .toggle-circle{
-        @apply w-4 h-4 bg-neutral-0 mx-0.5  rounded-full shadow;
+
+    .toggle-circle {
+        @apply w-4 h-4 bg-neutral-0 mx-0.5 rounded-full shadow;
     }
-    .ison{
+
+    .ison {
         @apply ml-auto self-end;
     }
+
+
 }
+

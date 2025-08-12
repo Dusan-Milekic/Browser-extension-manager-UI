@@ -18,7 +18,7 @@
                     class="w-[22px] h-[22px]">
             </div>
         </header>
-        <main class="h-[66px] w-[343px] mx-auto mt-10">
+        <main class="mx-auto mt-10 px-8">
             <!-- Filter section START -->
             <h1
                 class="text-center text-[34px] text-neutral-800 font-bold mb-6">Extensions
@@ -31,28 +31,15 @@
             <!-- Filter section END -->
 
             <!-- Cards section START-->
-            <section class="mt-10">
-                <div class="card">
-                    <div class="extinfo mx-4 mt-4">
-                        <div class="ico-container">
-                            <img src="assets/images/logo-devlens.svg" alt="ico">
-                        </div>
-                        <div class="details">
-                            <h2 class="text-xl font-bold text-neutral-900">DevLens</h2>
-                            <p class="text-neutral-600">Quickly inspect page layouts <br>and visualize element <br>boundaries.</p>
-                        </div>
-                    </div>
-                    <div class="btnsCotainer flex justify-between items-center">
-                        <button class="btn-ext mt-5">Remove</button>
-                        <button class="toggle-btn mt-5 py-0.5">
-                            <div class="toggle-circle"></div>
-                        </button>
-                    </div>
-                </div>
+            <section
+                class="mt-10 mx-auto grid gap-3 justify-items-center md:max-w-[790px] md:grid-cols-2 xl:max-w-[1200px] xl:grid-cols-3 2xl:grid-cols-4 2xl:max-w-[1700px]">
             </section>
             <!-- Cards section END -->
         </main>
 
     </body>
+    <script src="CardClass.js"></script>
+    <script src="createCards.js"></script>
     <script src="toggle.js"></script>
+
 </html>
