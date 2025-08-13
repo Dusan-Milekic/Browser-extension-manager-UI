@@ -16,13 +16,13 @@ class Card {
                 <img src="${this.pathImg}" alt="ico">
             </div>
             <div class="details min-h-[100px]">
-                <h2 id="detail-h2">${this.htitle}</h2>
-                <p>${this.pInfo}</p>
+                <h2 id="detail-h2" class="dark:text-neutral-0">${this.htitle}</h2>
+                <p class="dark:text-neutral-300">${this.pInfo}</p>
             </div>
         </div>
         <div class="btnsContainer">
-            <button class="btnText btn-ext">Remove</button>
-            <button class="btnToggle toggle-btn">
+            <button class="btnText btn-ext dark:border-neutral-600 dark:text-neutral-0">Remove</button>
+            <button class="btnToggle toggle-btn dark:bg-neutral-600">
                 <div class="toggle-circle"></div>
             </button>
         </div>
@@ -35,13 +35,13 @@ class Card {
                 <img src="${this.pathImg}" alt="ico">
             </div>
             <div class="details min-h-[100px]">
-                <h2 id="detail-h2">${this.htitle}</h2>
-                <p>${this.pInfo}</p>
+                <h2 id="detail-h2" class="dark:text-neutral-0">${this.htitle}</h2>
+                <p class="dark:text-neutral-300">${this.pInfo}</p>
             </div>
         </div>
         <div class="btnsContainer">
-            <button class="btnText btn-ext">Remove</button>
-            <button class="btnToggle toggle-btn bg-red-700">
+            <button class="btnText btn-ext  dark:border-neutral-600 dark:text-neutral-0">Remove</button>
+            <button class="btnToggle toggle-btn bg-red-700 dark:bg-red-400 hover:bg-red-500">
                 <div class="toggle-circle ison"></div>
             </button>
         </div>

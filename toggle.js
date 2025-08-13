@@ -35,10 +35,15 @@ function Toggle(event) {
     let cardId = parseInt(rootCard.id);
 
 
-    if (button.classList.contains('bg-red-700'))
+    if (button.classList.contains('bg-red-700')){
         button.classList.remove('bg-red-700');
-    else
+        button.classList.remove('hover:bg-red-500');
+    }
+    else{
         button.classList.add('bg-red-700');
+        button.classList.add('hover:bg-red-500');
+    }
+       
 
     let circle = button.querySelector('.toggle-circle');
 
@@ -50,7 +55,6 @@ function Toggle(event) {
         circle.classList.add('ison');
         AllCards[cardId].active = 1;
     }
-
 
 
 
