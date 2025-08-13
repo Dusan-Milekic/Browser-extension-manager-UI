@@ -54,7 +54,6 @@ let AllCards = [];
 
 
 for (let index = 0; index < Info.length; index++) {
-    const element = new Card(pathLogos[index], Titles[index], Info[index],active[index]);
-    element.BuildInDOM();
+    const element = new Card(index,pathLogos[index], Titles[index], Info[index],active[index]);
     AllCards.push(element);
 }

@@ -7,39 +7,68 @@
         <link href="./src/output.css" rel="stylesheet">
 
     </head>
-    <body class="bg-[#EBF2FC]">
+    <body class="bg-[#EBF2FC] 2xl:px-5">
         <header
-            class="bg-[#FBFDFE] border border-[#D6E2F5] shadow h-[66px] w-[343px] mx-auto flex items-center justify-between rounded-[10px] mt-[24px]">
+            class="bg-[#FBFDFE] border border-[#D6E2F5] shadow h-[66px] 
+               w-full min-w-[343px] max-w-[343px] mx-auto
+               flex items-center justify-between rounded-[10px] mt-[24px]
+               md:max-w-[790px] 
+               xl:max-w-[1190px] 
+               2xl:max-w-[1650px]">
             <img src="assets/images/logo.svg" alt="header" class="ml-3">
 
             <div
                 class="bg-neutral-100 mr-3 w-[50px] h-[50px] flex items-center justify-center rounded-xl">
-                <img src="assets/images/icon-moon.svg" alt="bmode"
-                    class="w-[22px] h-[22px]">
+                <img src="assets/images/icon-moon.svg" alt="bmode">
             </div>
         </header>
         <main class="mx-auto mt-10 px-8">
-            <!-- Filter section START -->
-            <h1
-                class="text-center text-[34px] text-neutral-800 font-bold mb-6">Extensions
+            <div class="flex flex-col  mx-auto space-y-6
+            md:justify-between md:items-center md:flex-row md:max-w-[710px] md:space-y-0
+            xl:max-w-[1170px] 
+            2xl:max-w-[1650px]
+            ">
+                <h1
+                class="text-center text-[34px] text-neutral-800 font-bold">Extensions
                 List</h1>
-            <div class="filter-container flex justify-center space-x-3">
-                <button class="filter-btn-active ">All</button>
+            <div class="filter-container flex justify-center space-x-3 activebtn">
+                <button class="filter-btn-inactive filter-btn-active">All</button>
                 <button class="filter-btn-inactive">Active</button>
                 <button class="filter-btn-inactive">Inactive</button>
             </div>
+            </div>
+            <!-- Filter section START -->
+            
             <!-- Filter section END -->
 
             <!-- Cards section START-->
             <section
-                class="mt-10 mx-auto grid gap-3 justify-items-center md:max-w-[790px] md:grid-cols-2 xl:max-w-[1200px] xl:grid-cols-3 2xl:grid-cols-4 2xl:max-w-[1700px]">
+                class="mt-10 mx-auto grid gap-3 justify-items-center 
+                md:mt-8 md:max-w-[790px] md:grid-cols-2 
+                xl:max-w-[1200px] xl:grid-cols-3 2xl:grid-cols-4 2xl:max-w-[1700px] 2xl:gap-y-7">
+            </section>
+
+            <section
+                class="mt-10 mx-auto grid gap-3 justify-items-center 
+                md:mt-8 md:max-w-[790px] md:grid-cols-2 
+                xl:max-w-[1200px] xl:grid-cols-3 2xl:grid-cols-4 2xl:max-w-[1700px] 2xl:gap-y-7 hidden">
+            </section>
+
+            <section
+                class="mt-10 mx-auto grid gap-3 justify-items-center 
+                md:mt-8 md:max-w-[790px] md:grid-cols-2 
+                xl:max-w-[1200px] xl:grid-cols-3 2xl:grid-cols-4 2xl:max-w-[1700px] 2xl:gap-y-7 hidden">
             </section>
             <!-- Cards section END -->
         </main>
 
     </body>
     <script src="CardClass.js"></script>
-    <script src="createCards.js"></script>
+    <script src="dataCards.js"></script>
     <script src="toggle.js"></script>
+  
+    <script src="activeCards.js"></script>
+    <script src="allCards.js"></script>
+    <script src="passiveCards.js"></script>
 
 </html>

@@ -39,10 +39,12 @@ body {
 @layer components {
     .filter-btn-inactive {
         @apply text-[20px] font-medium rounded-full border border-neutral-200 bg-neutral-0 text-neutral-800 pt-2 pb-2.5 px-5;
+        @apply cursor-pointer hover:text-neutral-950;
     }
 
     .filter-btn-active {
         @apply text-[20px] font-medium rounded-full bg-red-700 text-neutral-0 pt-2 pb-2.5 px-5;
+        @apply hover:text-neutral-0;
     }
 
     .extinfo {
