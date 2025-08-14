@@ -62,7 +62,7 @@ body {
     }
 
     .card {
-        @apply bg-neutral-0 border border-neutral-200 rounded-[20px] w-[343px] h-[200px];
+        @apply bg-neutral-0 border border-neutral-200 rounded-[20px] w-full h-[200px];
         @apply md:w-[346px];
         @apply xl:w-[382px];
         @apply dark:bg-neutral-800  border-neutral-600
