@@ -1,16 +1,14 @@
-
 class Card {
-    constructor(indexCard, pathImg, htitle, pInfo, active) {
-        this.indexCard = indexCard;
-        this.pathImg = pathImg;
-        this.htitle = htitle;
-        this.pInfo = pInfo;
-        this.active = active;
-    }
+  constructor(indexCard, pathImg, htitle, pInfo, active) {
+    this.indexCard = indexCard;
+    this.pathImg = pathImg;
+    this.htitle = htitle;
+    this.pInfo = pInfo;
+    this.active = active;
+  }
 
-    BuildInDOM(sectionId = 'all') {
-        let domBuilderString =
-            `<div id=${this.indexCard} class="card">
+  BuildInDOM(sectionId = "all") {
+    let domBuilderString = `<div id=${this.indexCard} class="card">
         <div class="extinfo">
             <div class="ico-container">
                 <img src="${this.pathImg}" alt="ico">
@@ -28,8 +26,7 @@ class Card {
         </div>
     </div>`;
 
-        let domBuilderStringACTIVE =
-            `<div id=${this.indexCard} class="card">
+    let domBuilderStringACTIVE = `<div id=${this.indexCard} class="card">
         <div class="extinfo">
             <div class="ico-container">
                 <img src="${this.pathImg}" alt="ico">
@@ -47,28 +44,28 @@ class Card {
         </div>
     </div>`;
 
-        if (sectionId === 'all') {
-            let section = document.getElementsByTagName('section')[0];
-            if (this.active === 1)
-                section.insertAdjacentHTML('beforeend', domBuilderStringACTIVE); // Dodaje kao poslednji child section-a
-            else
-                section.insertAdjacentHTML('beforeend', domBuilderString); // Dodaje kao poslednji child section-a
-        }
-        else if (sectionId === 'active') {
-            let section = document.getElementsByTagName('section')[1];
-            if (this.active === 1)
-                section.insertAdjacentHTML('beforeend', domBuilderStringACTIVE); // Dodaje kao poslednji child section-a
-            else
-                section.insertAdjacentHTML('beforeend', domBuilderString); // Dodaje kao poslednji child section-a
-        }
-        else if (sectionId === 'passive') {
-            let section = document.getElementsByTagName('section')[2];
-            if (this.active === 0)
-                section.insertAdjacentHTML('beforeend', domBuilderString); // Dodaje kao poslednji child section-a
-            else
-                section.insertAdjacentHTML('beforeend', domBuilderStringACTIVE); // Dodaje kao poslednji child section-a
-        }
-
-
+    if (sectionId === "all") {
+      let section = document.getElementsByTagName("section")[0];
+      if (this.active === 1)
+        section.insertAdjacentHTML("beforeend", domBuilderStringACTIVE);
+      // Dodaje kao poslednji child section-a
+      else section.insertAdjacentHTML("beforeend", domBuilderString); // Dodaje kao poslednji child section-a
+    } else if (sectionId === "active") {
+      let section = document.getElementsByTagName("section")[1];
+      if (this.active === 1)
+        section.insertAdjacentHTML("beforeend", domBuilderStringACTIVE);
+      // Dodaje kao poslednji child section-a
+      else section.insertAdjacentHTML("beforeend", domBuilderString); // Dodaje kao poslednji child section-a
+    } else if (sectionId === "passive") {
+      let section = document.getElementsByTagName("section")[2];
+      if (this.active === 0)
+        section.insertAdjacentHTML("beforeend", domBuilderString);
+      // Dodaje kao poslednji child section-a
+      else section.insertAdjacentHTML("beforeend", domBuilderStringACTIVE); // Dodaje kao poslednji child section-a
     }
+  }
+  RemoveCard(index) {
+    let card = document.getElementById(index);
+    card.remove(card);
+  }
 }

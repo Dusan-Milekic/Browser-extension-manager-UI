@@ -208,11 +208,17 @@
   .hidden {
     display: none;
   }
+  .table {
+    display: table;
+  }
   .h-\[50px\] {
     height: 50px;
   }
   .h-\[66px\] {
     height: 66px;
+  }
+  .h-screen {
+    height: 100vh;
   }
   .min-h-\[100px\] {
     min-height: 100px;
@@ -229,8 +235,14 @@
   .min-w-\[320px\] {
     min-width: 320px;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .cursor-pointer {
     cursor: pointer;
+  }
+  .resize {
+    resize: both;
   }
   .grid-cols-\[repeat\(auto-fit\,minmax\(300px\,343px\)\)\] {
     grid-template-columns: repeat(auto-fit,minmax(300px,343px));
@@ -246,9 +258,6 @@
   }
   .justify-center {
     justify-content: center;
-  }
-  .justify-items-center {
-    justify-items: center;
   }
   .gap-3 {
     gap: calc(var(--spacing) * 3);
@@ -338,9 +347,16 @@
   .text-neutral-900 {
     color: var(--color-neutral-900);
   }
+  .underline {
+    text-decoration-line: underline;
+  }
   .shadow {
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .transition {
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;
@@ -450,6 +466,11 @@
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
+  .\32 xl\:grid-cols-\[repeat\(4\,minmax\(270px\,400px\)\)\] {
+    @media (width >= 96rem) {
+      grid-template-columns: repeat(4,minmax(270px,400px));
+    }
+  }
   .\32 xl\:gap-y-7 {
     @media (width >= 96rem) {
       row-gap: calc(var(--spacing) * 7);
@@ -535,8 +556,8 @@
     }
   }
 }
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap");
 body {
   font-family: "Noto Sans", sans-serif;
   font-optical-sizing: auto;
@@ -669,7 +690,7 @@ body {
       width: 346px;
     }
     @media (width >= 80rem) {
-      width: 382px;
+      width: 100%;
     }
     border-color: var(--color-neutral-600);
     &:where(.dark, .dark *) {
@@ -734,6 +755,9 @@ body {
     cursor: pointer;
     border-radius: calc(infinity * 1px);
     background-color: var(--color-neutral-300);
+    &:where(.dark, .dark *) {
+      background-color: var(--color-neutral-600);
+    }
   }
   .toggle-circle {
     margin-inline: calc(var(--spacing) * 0.5);
@@ -875,6 +899,11 @@ body {
   inherits: false;
   initial-value: 0 0 #0000;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -905,6 +934,7 @@ body {
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-outline-style: solid;
     }
   }
 }

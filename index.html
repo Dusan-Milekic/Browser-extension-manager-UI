@@ -1,84 +1,77 @@
 <!DOCTYPE html>
-<html lang="en" class="">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Browser Extension Manager</title>
-        <link href="./src/output.css" rel="stylesheet">
+<html lang="en" class>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser Extension Manager</title>
+    <link href="./src/output.css" rel="stylesheet" />
+  </head>
+  <body
+    class="bg-gradient-to-b from-[#EBF2FC] to-[#EEFBF9] 2xl:px-5 dark:bg-gradient-to-b dark:from-[#04091B] dark:to-[#091540] h-screen"
+  >
+    <header
+      class="bg-[#FBFDFE] border border-[#D6E2F5] shadow h-[66px] w-full min-w-[320px] max-w-[343px] mx-auto flex items-center justify-between rounded-[10px] mt-[24px] md:max-w-[790px] xl:max-w-[1190px] 2xl:max-w-[1650px] dark:bg-neutral-800 dark:border-0"
+    >
+      <div class="flex items-center space-x-4">
+        <img
+          src="assets/images/logo-main.png"
+          alt="header"
+          class="ml-3 dark:fill-red-400"
+        />
+        <h1
+          id="mainh1"
+          class="font-semibold text-neutral-900 text-2xl dark:text-white"
+        >
+          Extensions
+        </h1>
+      </div>
 
-    </head>
-    <body class="bg-gradient-to-b from-[#EBF2FC] to-[#EEFBF9] 2xl:px-5
-     dark:bg-gradient-to-b dark:from-[#04091B] dark:to-[#091540]">
-        <header
-            class="bg-[#FBFDFE] border border-[#D6E2F5] shadow h-[66px] 
-               w-full min-w-[320px] max-w-[343px] mx-auto
-               flex items-center justify-between rounded-[10px] mt-[24px]
-               md:max-w-[790px] 
-               xl:max-w-[1190px] 
-               2xl:max-w-[1650px]
-               dark:bg-neutral-800 dark:border-0">
-            <div class="flex items-center space-x-4">
-                <img src="assets/images/logo-main.png" alt="header"
-                    class="ml-3 dark:fill-red-400">
-                <h1 id="mainh1"
-                    class="font-semibold text-neutral-900 text-2xl dark:text-white">Extensions</h1>
-            </div>
+      <div
+        class="bg-neutral-100 mr-3 w-[50px] h-[50px] flex items-center justify-center rounded-xl hover:bg-neutral-300 cursor-pointer transition dark:bg-neutral-700"
+      >
+        <img src="assets/images/icon-moon.svg" alt="bmode" id="darkmodeIcon" />
+      </div>
+    </header>
+    <main class="mx-auto mt-10 px-4 pb-16 md:px-8 xl:px-12 2xl:px-16">
+      <div
+        class="flex flex-col mx-auto space-y-6 md:justify-between md:items-center md:flex-row md:max-w-[710px] md:space-y-0 xl:max-w-[1170px] 2xl:max-w-[1650px]"
+      >
+        <h1
+          class="text-center text-[34px] text-neutral-800 font-bold dark:text-neutral-0"
+        >
+          Extensions List
+        </h1>
+        <div class="filter-container flex justify-center space-x-3 activebtn">
+          <button class="filter-btn-inactive filter-btn-active">All</button>
+          <button class="filter-btn-inactive">Active</button>
+          <button class="filter-btn-inactive">Inactive</button>
+        </div>
+      </div>
+      <!-- Filter section START -->
 
-            <div
-                class="bg-neutral-100 mr-3 w-[50px] h-[50px] flex items-center justify-center rounded-xl hover:bg-neutral-300 cursor-pointer transition 
-                dark:bg-neutral-700">
-                <img src="assets/images/icon-moon.svg" alt="bmode" id="darkmodeIcon">
-            </div>
-        </header>
-        <main class="mx-auto mt-10 px-4 pb-16 md:px-8 xl:px-12 2xl:px-16">
-            <div class="flex flex-col  mx-auto space-y-6
-            md:justify-between md:items-center md:flex-row md:max-w-[710px] md:space-y-0
-            xl:max-w-[1170px] 
-            2xl:max-w-[1650px]
-            ">
-                <h1
-                    class="text-center text-[34px] text-neutral-800 font-bold dark:text-neutral-0">Extensions
-                    List</h1>
-                <div
-                    class="filter-container flex justify-center space-x-3 activebtn">
-                    <button
-                        class="filter-btn-inactive filter-btn-active">All</button>
-                    <button class="filter-btn-inactive">Active</button>
-                    <button class="filter-btn-inactive">Inactive</button>
-                </div>
-            </div>
-            <!-- Filter section START -->
+      <!-- Filter section END -->
 
-            <!-- Filter section END -->
+      <!-- Cards section START-->
+      <section
+        class="mt-10 mx-auto grid grid-cols-[repeat(auto-fit,minmax(300px,343px))] gap-3 justify-center md:mt-8 md:max-w-[790px] md:grid-cols-2 xl:max-w-[1200px] xl:grid-cols-3 2xl:grid-cols-[repeat(4,minmax(270px,400px))] 2xl:max-w-[1700px] 2xl:gap-y-7"
+      ></section>
 
-            <!-- Cards section START-->
-            <section
-                class="mt-10 mx-auto grid grid-cols-[repeat(auto-fit,minmax(300px,343px))] gap-3 justify-center
-                md:mt-8 md:max-w-[790px] md:grid-cols-2 
-                xl:max-w-[1200px] xl:grid-cols-3 2xl:grid-cols-4 2xl:max-w-[1700px] 2xl:gap-y-7">
-            </section>
+      <section
+        class="mt-10 mx-auto grid grid-cols-[repeat(auto-fit,minmax(300px,343px))] gap-3 justify-center md:mt-8 md:max-w-[790px] md:grid-cols-2 xl:max-w-[1200px] xl:grid-cols-3 2xl:grid-cols-4 2xl:max-w-[1700px] 2xl:gap-y-7 hidden"
+      ></section>
 
-            <section
-                class="mt-10 mx-auto grid gap-3 justify-items-center 
-                md:mt-8 md:max-w-[790px] md:grid-cols-2 
-                xl:max-w-[1200px] xl:grid-cols-3 2xl:grid-cols-4 2xl:max-w-[1700px] 2xl:gap-y-7 hidden">
-            </section>
+      <section
+        class="mt-10 mx-auto grid grid-cols-[repeat(auto-fit,minmax(300px,343px))] gap-3 justify-center md:mt-8 md:max-w-[790px] md:grid-cols-2 xl:max-w-[1200px] xl:grid-cols-3 2xl:grid-cols-4 2xl:max-w-[1700px] 2xl:gap-y-7 hidden"
+      ></section>
+      <!-- Cards section END -->
+    </main>
+  </body>
+  <script src="CardClass.js"></script>
+  <script src="dataCards.js"></script>
+  <script src="toggle.js"></script>
 
-            <section
-                class="mt-10 mx-auto grid gap-3 justify-items-center 
-                md:mt-8 md:max-w-[790px] md:grid-cols-2 
-                xl:max-w-[1200px] xl:grid-cols-3 2xl:grid-cols-4 2xl:max-w-[1700px] 2xl:gap-y-7 hidden">
-            </section>
-            <!-- Cards section END -->
-        </main>
-
-    </body>
-    <script src="CardClass.js"></script>
-    <script src="dataCards.js"></script>
-    <script src="toggle.js"></script>
-
-    <script src="activeCards.js"></script>
-    <script src="allCards.js"></script>
-    <script src="passiveCards.js"></script>
-    <script src="darkTheme.js"></script>
+  <script src="activeCards.js"></script>
+  <script src="allCards.js"></script>
+  <script src="passiveCards.js"></script>
+  <script src="darkTheme.js"></script>
 </html>
