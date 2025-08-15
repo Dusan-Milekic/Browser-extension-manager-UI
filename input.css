@@ -43,28 +43,32 @@ body {
 
 @layer components {
   .filter-btn-inactive {
-    @apply text-[20px] font-medium rounded-full border border-neutral-200 bg-neutral-0 text-neutral-800 pt-2 pb-2.5 px-5;
-    @apply cursor-pointer hover:text-neutral-950 hover:opacity-70;
-    @apply dark:border-neutral-600 dark:bg-neutral-700 dark:text-white;
-    @apply dark:hover:bg-neutral-600 dark:hover:text-white;
+    @apply text-[20px] font-medium rounded-full border border-neutral-200 bg-neutral-0 text-neutral-800 pt-2 pb-2.5 px-5
+    cursor-pointer hover:text-neutral-950 hover:opacity-70
+    dark:border-neutral-600 dark:bg-neutral-700 dark:text-white
+    dark:hover:bg-neutral-600 dark:hover:text-white;
   }
 
   .filter-btn-active {
-    @apply text-[20px] font-medium rounded-full bg-red-700 text-neutral-0 pt-2 pb-2.5 px-5;
-    @apply hover:text-neutral-0 hover:opacity-100;
-    @apply dark:border-0 dark:bg-red-400 dark:text-neutral-900;
-    @apply dark:hover:bg-red-400 dark:hover:text-neutral-900;
+    @apply text-[20px] font-medium rounded-full bg-red-700 text-neutral-0 pt-2 pb-2.5 px-5
+    hover:text-neutral-0 hover:opacity-100
+    dark:border-0 dark:bg-red-400 dark:text-neutral-900
+    dark:hover:bg-red-400 dark:hover:text-neutral-900;
   }
 
   .extinfo {
     @apply flex space-x-4 mx-4 mt-4;
   }
-
+  .section-cards {
+    @apply mt-10 mx-auto grid grid-cols-[repeat(auto-fit,minmax(300px,343px))] gap-3 justify-center 
+    md:mt-8 md:max-w-[790px] md:grid-cols-2 
+    xl:max-w-[1200px] xl:grid-cols-3 2xl:grid-cols-[repeat(4,minmax(270px,400px))] 2xl:max-w-[1700px] 2xl:gap-y-7;
+  }
   .card {
-    @apply bg-neutral-0 border border-neutral-200 rounded-[20px] w-full h-[200px];
-    @apply md:w-[346px];
-    @apply xl:w-full;
-    @apply dark:bg-neutral-800  border-neutral-600;
+    @apply bg-neutral-0 border border-neutral-200 rounded-[20px] w-full h-[200px]
+    md:w-[346px]
+    xl:w-full
+    dark:bg-neutral-800  dark:border-neutral-600;
   }
 
   .ico-container {
@@ -80,9 +84,9 @@ body {
   }
 
   .btnText {
-    @apply mt-5 cursor-pointer;
-    @apply hover:bg-red-700 hover:text-neutral-0;
-    @apply transition;
+    @apply mt-5 cursor-pointer
+    hover:bg-red-700 hover:text-neutral-0
+    transition;
   }
 
   .btnToggle {

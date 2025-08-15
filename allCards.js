@@ -2,8 +2,9 @@ btnAll.addEventListener("click", () => {
   btnPassive.classList.remove("filter-btn-active");
   btnActive.classList.remove("filter-btn-active");
   //Clear all html from section before adding new cards
+  CleanDOM("passive");
   CleanDOM("all");
-
+  CleanDOM("active");
   //remove hidden frorm seciton Active and add hidden to others sections
   let sectionActive = document.getElementsByTagName("section")[1];
   let sectionPassive = document.getElementsByTagName("section")[2];
@@ -31,18 +32,16 @@ window.addEventListener("DOMContentLoaded", () => {
   AllCardsSection();
 
   //Implemnation for deletting cards
-  let cards_all_remove = document
-    .querySelectorAll(".btnText")
-    .forEach((btn) => {
-      btn.addEventListener("click", () => {
-        CleanDom(btn);
-      });
+  document.querySelectorAll(".btnText").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      CleanDom(btn);
     });
+  });
 });
 
 function CleanDom(btn) {
   id = btn.parentElement.parentElement.id; //Get id of card
-  AllCards.pop(id); //Remove from array
+  AllCards.splice(id, 1); //Remove card from AllCards array
   let card = btn.parentElement.parentElement; //Get card element
   card.remove();
 }

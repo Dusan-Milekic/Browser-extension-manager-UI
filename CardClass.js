@@ -44,28 +44,20 @@ class Card {
         </div>
     </div>`;
 
-    if (sectionId === "all") {
-      let section = document.getElementsByTagName("section")[0];
-      if (this.active === 1)
-        section.insertAdjacentHTML("beforeend", domBuilderStringACTIVE);
-      // Dodaje kao poslednji child section-a
-      else section.insertAdjacentHTML("beforeend", domBuilderString); // Dodaje kao poslednji child section-a
-    } else if (sectionId === "active") {
-      let section = document.getElementsByTagName("section")[1];
-      if (this.active === 1)
-        section.insertAdjacentHTML("beforeend", domBuilderStringACTIVE);
-      // Dodaje kao poslednji child section-a
-      else section.insertAdjacentHTML("beforeend", domBuilderString); // Dodaje kao poslednji child section-a
-    } else if (sectionId === "passive") {
-      let section = document.getElementsByTagName("section")[2];
-      if (this.active === 0)
-        section.insertAdjacentHTML("beforeend", domBuilderString);
-      // Dodaje kao poslednji child section-a
-      else section.insertAdjacentHTML("beforeend", domBuilderStringACTIVE); // Dodaje kao poslednji child section-a
-    }
-  }
-  RemoveCard(index) {
-    let card = document.getElementById(index);
-    card.remove(card);
+    /* ***Builiding card in DOM   *** */
+    //Get all sections
+    let sections = document.getElementsByTagName("section");
+    let sectionCurrent;
+    if (sectionId === "all") sectionCurrent = sections[0];
+    //if in section all, get first section (all cards)
+    else if (sectionId === "active") sectionCurrent = sections[1];
+    //if in section active, get second section (active cards)
+    else if (sectionId === "passive") sectionCurrent = sections[2];
+    //if in section passive, get third section (passive cards)
+
+    // If card is active ,build it with active style,otherwise build it with normal style
+    if (this.active === 1)
+      sectionCurrent.insertAdjacentHTML("beforeend", domBuilderStringACTIVE);
+    else sectionCurrent.insertAdjacentHTML("beforeend", domBuilderString);
   }
 }
