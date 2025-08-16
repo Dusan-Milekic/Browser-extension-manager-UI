@@ -43,7 +43,7 @@ let Info = [
   "Enhanced developer console with advanced logging and debugging.",
 ];
 
-let active = [1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0];
+let active = [1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1];
 
 let AllCards = new Map();
 
