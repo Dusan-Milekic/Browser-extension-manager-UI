@@ -202,9 +202,6 @@
   .flex {
     display: flex;
   }
-  .grid {
-    display: grid;
-  }
   .hidden {
     display: none;
   }
@@ -235,9 +232,6 @@
   .cursor-pointer {
     cursor: pointer;
   }
-  .grid-cols-\[repeat\(auto-fit\,minmax\(300px\,343px\)\)\] {
-    grid-template-columns: repeat(auto-fit,minmax(300px,343px));
-  }
   .flex-col {
     flex-direction: column;
   }
@@ -249,9 +243,6 @@
   }
   .justify-center {
     justify-content: center;
-  }
-  .gap-3 {
-    gap: calc(var(--spacing) * 3);
   }
   .space-y-6 {
     :where(& > :not(:last-child)) {
@@ -361,11 +352,6 @@
       }
     }
   }
-  .md\:mt-8 {
-    @media (width >= 48rem) {
-      margin-top: calc(var(--spacing) * 8);
-    }
-  }
   .md\:max-w-\[710px\] {
     @media (width >= 48rem) {
       max-width: 710px;
@@ -374,11 +360,6 @@
   .md\:max-w-\[790px\] {
     @media (width >= 48rem) {
       max-width: 790px;
-    }
-  }
-  .md\:grid-cols-2 {
-    @media (width >= 48rem) {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
   .md\:flex-row {
@@ -420,16 +401,6 @@
       max-width: 1190px;
     }
   }
-  .xl\:max-w-\[1200px\] {
-    @media (width >= 80rem) {
-      max-width: 1200px;
-    }
-  }
-  .xl\:grid-cols-3 {
-    @media (width >= 80rem) {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-  }
   .xl\:px-12 {
     @media (width >= 80rem) {
       padding-inline: calc(var(--spacing) * 12);
@@ -438,26 +409,6 @@
   .\32 xl\:max-w-\[1650px\] {
     @media (width >= 96rem) {
       max-width: 1650px;
-    }
-  }
-  .\32 xl\:max-w-\[1700px\] {
-    @media (width >= 96rem) {
-      max-width: 1700px;
-    }
-  }
-  .\32 xl\:grid-cols-4 {
-    @media (width >= 96rem) {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-  }
-  .\32 xl\:grid-cols-\[repeat\(4\,minmax\(270px\,400px\)\)\] {
-    @media (width >= 96rem) {
-      grid-template-columns: repeat(4,minmax(270px,400px));
-    }
-  }
-  .\32 xl\:gap-y-7 {
-    @media (width >= 96rem) {
-      row-gap: calc(var(--spacing) * 7);
     }
   }
   .\32 xl\:px-5 {

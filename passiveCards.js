@@ -5,8 +5,10 @@ btnPassive.addEventListener("click", () => {
   CleanDOM_Sections();
 
   //remove hidden frorm seciton Active and add hidden to others sections
+
   let sectionActive = document.getElementsByTagName("section")[1];
   let sectionAll = document.getElementsByTagName("section")[0];
+
   sectionActive.classList.add("hidden");
   sectionAll.classList.add("hidden");
 

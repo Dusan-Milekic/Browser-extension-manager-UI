@@ -10,8 +10,6 @@ body {
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
-@custom-variant toggle_on (&:where(.toggle_on, .toggle_on *));
-
 @theme {
   --color-neutral-0: #fbfdfe;
   --color-neutral-100: #eeeeee;
@@ -24,8 +22,6 @@ body {
   --color-red-400: #f25c54;
   --color-red-500: #de4840;
   --color-red-700: #c7231a;
-
-  --breakpoint-desktop: 1170px;
 }
 
 #mainh1 {
@@ -61,7 +57,7 @@ body {
   }
   .section-cards {
     @apply mt-10 mx-auto grid grid-cols-[repeat(auto-fit,minmax(300px,343px))] gap-3 justify-center 
-    md:mt-8 md:max-w-[790px] md:grid-cols-2 
+    md:mt-8 md:max-w-[790px] md:grid-cols-2
     xl:max-w-[1200px] xl:grid-cols-3 2xl:grid-cols-[repeat(4,minmax(270px,400px))] 2xl:max-w-[1700px] 2xl:gap-y-7;
   }
   .card {
